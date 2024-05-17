@@ -1,5 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
-import { IconSquareCheckFilled } from "@tabler/icons-react";
+import {
+  IconSquareCheckFilled,
+  IconSquareMinusFilled,
+} from "@tabler/icons-react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,7 +12,14 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const skills = ["React", "Redux", "GraphQL", "TypeScript"];
+  const skills = [
+    { name: "React", status: "active" },
+    { name: "Redux", status: "active" },
+    { name: "tailwindcss", status: "active" },
+    { name: "TypeScript", status: "active" },
+    { name: "GraphQL", status: "paused" },
+    { name: "styled components", status: "paused" },
+  ];
 
   return (
     <div className="bg-slate-800 text-slate-100 min-h-screen p-10 source-code-pro">
@@ -25,11 +35,15 @@ export default function Index() {
         <ul className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
           {skills.map((skill) => (
             <li
-              key={skill}
+              key={skill.name}
               className="bg-slate-700 px-3 py-3 rounded-lg flex gap-3 items-center justify-between"
             >
-              <span className="pl-2 text-xl">{skill}</span>
-              <IconSquareCheckFilled className="text-green-500" size={32} />
+              <span className="pl-2 text-xl">{skill.name}</span>
+              {skill.status === "active" ? (
+                <IconSquareCheckFilled className="text-green-500" size={32} />
+              ) : (
+                <IconSquareMinusFilled className="text-yellow-500" size={32} />
+              )}
             </li>
           ))}
         </ul>
