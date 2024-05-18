@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const header = () => ({
+export const headers = () => ({
   "Cache-Control": "max-age=300, stale-while-revalidate",
 });
 
