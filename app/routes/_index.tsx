@@ -26,7 +26,7 @@ export default function Index() {
     { name: "MobX", status: "paused" },
     { name: "Sass", status: "paused" },
     { name: "Cypress", status: "paused" },
-    { name: "Wordpress", status: "stopped" },
+    { name: "PHP/Python/Ruby", status: "stopped" },
     { name: "Rails", status: "stopped" },
     { name: "AngularJS", status: "stopped" },
     { name: "BackboneJS", status: "stopped" },
