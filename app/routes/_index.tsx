@@ -12,6 +12,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const header = () => ({
+  "Cache-Control": "max-age=300, stale-while-revalidate",
+});
+
 export default function Index() {
   const skills = [
     { name: "HTML/CSS/TS", status: "active" },
