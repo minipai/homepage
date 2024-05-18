@@ -1,12 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import {
-  IconHeart,
-  IconHeartFilled,
-  IconPlayerStopFilled,
   IconSquareCheckFilled,
   IconSquareMinusFilled,
   IconSquareXFilled,
-  IconStarFilled,
 } from "@tabler/icons-react";
 
 export const meta: MetaFunction = () => {
