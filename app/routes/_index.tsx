@@ -42,10 +42,10 @@ export default function Index() {
     <div className="bg-slate-800 text-slate-100 min-h-screen p-10 source-code-pro">
       <div className="mx-auto max-w-[960px]">
         <div className="text-center">
-          <h1 className="noto-serif-bold text-[2rem] md:text-[4rem] mt-20">
+          <h1 className="noto-serif-bold text-[2rem] md:text-[4rem] mt-20 ">
             Hello, my name is <span className="text-nowrap">Art Pai</span>
           </h1>
-          <p className="text-[1.5rem] md:text-[2.5rem] my-10 text-slate-500">
+          <p className="text-[1.5rem] md:text-[2.5rem] my-10 animated-gradient-text">
             I am a style coder
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Index() {
                   {
                     active: "",
                     paused: "mt-1 opacity-60",
-                    stopped: "mt-3 opacity-20",
+                    stopped: "mt-3 opacity-30",
                   }[skill.status]
                 }`}
               >
@@ -86,16 +86,16 @@ export default function Index() {
             ))}
           </ul>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-10 text-slate-300">
-            <p className="flex gap-2">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 mt-12 text-slate-300">
+            <p className="flex gap-2 opacity-100">
               <IconSquareCheckFilled className="text-green-500" size={24} />
               Actively using
             </p>
-            <p className="flex gap-2">
+            <p className="flex gap-2 opacity-60">
               <IconSquareMinusFilled className="text-yellow-500" size={24} />
               Had been using
             </p>
-            <p className="flex gap-2">
+            <p className="flex gap-2 opacity-30">
               <IconSquareXFilled className="text-red-500" size={24} />
               It&apos;s been a while
             </p>
